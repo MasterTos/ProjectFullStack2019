@@ -31,14 +31,11 @@ Four day full stack 4-7 June 2019 @ Computer Science Thammasat University
 
 ### Borrow
 
-
-| Name | Data Type |
-| :--: | :-------: |
-|      |           |
-| ID | Borrower | Book |
-| :--: | :--: | :--: |
-| PrimaryKey | ForiegnKey | ForiegnKey |
-
+| Name     | Type       |
+|----------|------------|
+| ID       | PrimaryKey |
+| Borrower | ForiegnKey |
+| Book     | ForiegnKey |
 
 ### Publisher
 
