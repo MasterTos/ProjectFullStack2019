@@ -38,7 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'social_django',
-    'tuauth'
+    'tuauth',
+    'example_app',
 ]
 
 MIDDLEWARE = [
