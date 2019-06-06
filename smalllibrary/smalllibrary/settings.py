@@ -37,6 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'social_django',
+    'tuauth'
 ]
 
 MIDDLEWARE = [
@@ -70,6 +72,26 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'smalllibrary.wsgi.application'
 
+AUTHENTICATION_BACKENDS = [
+    'django.contrib.auth.backends.ModelBackend',
+    'tuauth.backend.TUOAuth2',
+]
+
+SOCIAL_AUTH_PIPELINE = [ 
+    'social_core.pipeline.social_auth.social_details',
+    'social_core.pipeline.social_auth.social_uid',
+    'social_core.pipeline.social_auth.social_user',
+    'social_core.pipeline.user.get_username',
+    'social_core.pipeline.user.create_user',
+    'social_core.pipeline.social_auth.associate_user',
+    'social_core.pipeline.social_auth.load_extra_data',
+    'social_core.pipeline.user.user_details',
+    'social_core.pipeline.social_auth.associate_by_email',
+]
+
+# TU AUTH KEY WILL BE REMOVED ON 8/6/2562
+SOCIAL_AUTH_TU_KEY = 'MUOuIuUl4GneTP4DgpSKftFaYjSQGvScKqYNQ42S'
+SOCIAL_AUTH_TU_SECRET = 'jWJuFTWEvs3gIKOxw0izPgtMvwFbLmhthyTyK3XjDuGiJWFQ47RCiHga3ip99Bdm44JiHRNCPyrL9Bzp0BlvUNKUmcJtRsRKcABUC8k1gW0Gff7xUQngGDOVutyyzFE8'
 
 # Database
 # https://docs.djangoproject.com/en/2.1/ref/settings/#databases
