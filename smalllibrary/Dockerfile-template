@@ -1,0 +1,11 @@
+FROM python:alpine
+
+WORKDIR /web
+
+ADD requirements.txt /web/requirements.txt
+
+RUN pip install -r requirements.txt
+
+ADD . .
+
+CMD ["sh", "runall.sh"]

@@ -1,0 +1,14 @@
+verison: '3'
+
+services:
+  web:
+    build: ./smalllibrary
+    ports:
+      - 8000:8000
+    volume:
+      - ./smalllibrary:/web
+    depend_on:
+      - db
+
+  db:
+    image: postgres:alpine
