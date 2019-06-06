@@ -39,18 +39,24 @@ Four day full stack 4-7 June 2019 @ Computer Science Thammasat University
 
 ### Publisher
 
-| ID | Name |
-| :---: | :---: |
-| PrimaryKey | CharField |
+| Name | Type       |
+|------|------------|
+| ID   | PrimaryKey |
+| Name | CharField  |
 
 ### Binding
 
-| ID | Name |
-| :---: | :---: |
-| PrimaryKey | CharField |
+| Name | Type       |
+|------|------------|
+| ID   | PrimaryKey |
+| Name | CharField  |
 
 ### Transaction
 
-| ID | Book | Actor | Action | Created  |
-| :---: | :---: | :---: | :---: | :---: |
-| PrimaryKey | ForiegnKey | ForiegnKey | CharField | DateTimeField |
+| Name    | Type          |
+|---------|---------------|
+| ID      | PrimaryKey    |
+| Book    | ForiegnKey    |
+| Actor   | ForiegnKey    |
+| Action  | CharField     |
+| Created | DateTimeField |
