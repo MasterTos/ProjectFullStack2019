@@ -14,7 +14,7 @@ Four day 4-7 June 2019 @ Computer Science Thammasat University
 - หนังสือแต่ละเล่มต้องมีองค์ประกอบสำคัญตาม [Base Scheme](#base-schema) _**หมายเหตุ** สามารถเพิ่มองค์ประกอบได้ตามความเหมาะสม_
 
 ## Base schema
-> - Book  
+### Book  
 
 | ID | Title | ISBN_10 | Author | Binding | Year | Publisher |  
 | :---: | :---: | :---: | :---: | :---: | :---: | :--: |
@@ -23,26 +23,26 @@ Four day 4-7 June 2019 @ Computer Science Thammasat University
 **หมายเหตุ** สามารถหาข้อมูลหนังสือเพิ่มเติมได้ที่
 - https://isbnsearch.org
 
-> - Borrow
+### Borrow
 
 | ID | Borrower | Book |  
 | :--: | :--: | :--: |
 | PrimaryKey | ForiegnKey | ForiegnKey |  
 
 
-> - Publisher  
+### Publisher  
 
 | ID | Name |   
 | :---: | :---: |  
 | PrimaryKey | CharField | 
 
-> - Binding  
+### Binding  
 
 | ID | Name |   
 | :---: | :---: |  
 | PrimaryKey | CharField | 
 
-> - Transaction
+### Transaction
 
 | ID | Book | Actor | Action | Created  |  
 | :---: | :---: | :---: | :---: | :---: |
