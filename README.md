@@ -1,5 +1,5 @@
 # ProjectFullStack2019
-Four day 4-7 June 2019 @ Computer Science Thammasat University
+Four day full stack 4-7 June 2019 @ Computer Science Thammasat University
 
 
 ## Descriptions
