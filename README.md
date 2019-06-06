@@ -14,36 +14,46 @@ Four day full stack 4-7 June 2019 @ Computer Science Thammasat University
 - หนังสือแต่ละเล่มต้องมีองค์ประกอบสำคัญตาม [Base Scheme](#base-schema) _**หมายเหตุ** สามารถเพิ่มองค์ประกอบได้ตามความเหมาะสม_
 
 ## Base schema
-### Book  
+### Book
 
-| ID | Title | ISBN_10 | Author | Binding | Year | Publisher |  
-| :---: | :---: | :---: | :---: | :---: | :---: | :--: |
-| PrimaryKey | CharField | CharField | CharField |  ForiegnKey | PositiveSmallInteger |  ForiegnKey |
+| Name      | Type                 |
+|-----------|----------------------|
+| ID        | PrimaryKey           |
+| Title     | CharField            |
+| ISBN_10   | CharField            |
+| Author    | CharField            |
+| Binding   | ForiegnKey           |
+| Year      | PositiveSmallInteger |
+| Publisher | ForiegnKey           |
 
 **หมายเหตุ** สามารถหาข้อมูลหนังสือเพิ่มเติมได้ที่
 - https://isbnsearch.org
 
 ### Borrow
 
-| ID | Borrower | Book |  
+
+| Name | Data Type |
+| :--: | :-------: |
+|      |           |
+| ID | Borrower | Book |
 | :--: | :--: | :--: |
-| PrimaryKey | ForiegnKey | ForiegnKey |  
+| PrimaryKey | ForiegnKey | ForiegnKey |
 
 
-### Publisher  
+### Publisher
 
-| ID | Name |   
-| :---: | :---: |  
-| PrimaryKey | CharField | 
+| ID | Name |
+| :---: | :---: |
+| PrimaryKey | CharField |
 
-### Binding  
+### Binding
 
-| ID | Name |   
-| :---: | :---: |  
-| PrimaryKey | CharField | 
+| ID | Name |
+| :---: | :---: |
+| PrimaryKey | CharField |
 
 ### Transaction
 
-| ID | Book | Actor | Action | Created  |  
+| ID | Book | Actor | Action | Created  |
 | :---: | :---: | :---: | :---: | :---: |
-| PrimaryKey | ForiegnKey | ForiegnKey | CharField | DateTimeField | 
+| PrimaryKey | ForiegnKey | ForiegnKey | CharField | DateTimeField |
