@@ -1,13 +1,13 @@
-verison: '3'
+version: '3'
 
 services:
   web:
     build: ./smalllibrary
     ports:
       - 8000:8000
-    volume:
+    volumes:
       - ./smalllibrary:/web
-    depend_on:
+    depends_on:
       - db
 
   db:
